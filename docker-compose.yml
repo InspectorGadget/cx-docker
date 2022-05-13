@@ -1,0 +1,11 @@
+services:
+  oradock:
+    image: cx-docker
+    tty: true
+    stdin_open: true
+    container_name: cx-docker
+    volumes:
+      - oradock:/opt/oracle
+
+volumes:
+  oradock:
