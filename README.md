@@ -8,7 +8,7 @@ All you got to do, is to follow the steps below.
 
 ## Steps
 1. Install Docker on your machine.
-    - You may need to also install Docker Compose. Some distro doesn't have Docker pre-installed. 
+    * You may need to also install Docker Compose. Some distro doesn't have Docker Compose pre-installed. 
 2. Clone this repository.
 3. Open your terminal and navigate to the cloned repository (Tip: `cd`).
 4. Change the file permission of `install.sh` to executable. (Tip: `chmod +x install.sh`)
