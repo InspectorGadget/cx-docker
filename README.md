@@ -1,17 +1,27 @@
-# CX Dock
-
+# CX Oracle Installer through Docker
 ---
-## Facts
-1. Use this Docker container if you are into installing CX Oracle on your local Machine.
-2. This Docker image packs with Oracle Instantclient v21.x. 
-3. You will be able to mount the Docker volume to your `/opt/oracle` path and get started with your Python script.
-4. This is untested on Macbook Pro (M1 or M1 Pro). It works fine on Intel flavoured Macbooks.
 
-## Commands
-```
-docker run -it -d --name cx-dock inspectorgadget12/cx-dock
-```
-Or, using Docker Compose
-```
-docker-compose -p ora-stack up -d
-```
+## Introduction
+Installing CX Oracle has been a "pain" for many of us (Including me), who even wants to waste their time on setting up CX Oracle from scratch right? I've gone ahead to make your life a little easier with this easy to use Docker File / Bash Script. 
+
+All you got to do, is to follow the steps below. 
+
+## Steps
+1. Install Docker on your machine.
+    - You may need to also install Docker Compose. Some distro doesn't have Docker pre-installed. 
+2. Clone this repository.
+3. Open your terminal and navigate to the cloned repository (Tip: `cd`).
+4. Change the file permission of `install.sh` to executable. (Tip: `chmod +x install.sh`)
+5. Run the `install.sh` file. (Tip: `./install.sh`)
+6. Wait for the installation to complete.
+7. Woila! You can now run CX Oracle on any of your projects. Remember that the steps performed by you above is one-time only! If your installation is corrupted, please re-run the `install.sh` file.
+
+## Notes
+- You may be asked for your password during the installation process. This is because the script needs to run some commands as `root` user, but it is totally safe!
+- I will ensure the environment variables are globalised in the future! (WIP)
+
+## Contributing
+If you have any suggestions, please feel free to open an issue or a pull request.
+
+## Contributors
+- [InspectorGadget](https://github.com/InspectorGadget)

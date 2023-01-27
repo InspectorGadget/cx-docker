@@ -1,11 +1,18 @@
 services:
   oradock:
-    image: cx-docker
+    build: 
+      context: .
+      dockerfile: Dockerfile
     tty: true
     stdin_open: true
-    container_name: cx-docker
+    container_name: cx_oracle_dock
     volumes:
-      - oradock:/opt/oracle
-
+      - oradata:/opt/oracle
+    
 volumes:
-  oradock:
+  oradata:
+    driver: local
+    driver_opts:
+      type: none
+      device: "$PWD/oracle"
+      o: "bind"
