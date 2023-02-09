@@ -58,17 +58,11 @@ if [ "$PROMPT" = "mac" ]; then
     sudo mkdir -p /Users/$(whoami)/oracle/lib
     sudo ln -s $HOME/oracle/libclntsh.dylib.19.1 /Users/$(whoami)/oracle/lib/libclntsh.dylib
 
-    if [ -z "$FISH_VERSION" ]; then
-        echo "Found that you are using Fish, setting the environment."
-        set -x ORACLE_HOME /Users/$(whoami)/oracle
-        set -x LD_LIBRARY_PATH $ORACLE_HOME
-        set -x PATH $ORACLE_HOME $PATH
-    else
-        echo "Setting environment for Bash."
-        export ORACLE_HOME=/Users/$(whoami)/oracle
-        export LD_LIBRARY_PATH=$ORACLE_HOME
-        export PATH=$ORACLE_HOME:$PATH
-    fi
+    echo "Set environment variables in your shell."
+    echo " "
+    echo "export ORACLE_HOME=/Users/$(whoami)/oracle"
+    echo "export LD_LIBRARY_PATH=$ORACLE_HOME"
+    echo "export PATH=$ORACLE_HOME:$PATH"
 
     exit 1
 else
