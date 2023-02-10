@@ -28,7 +28,7 @@ All you got to do, is to follow the steps below.
    - Delete the contents in the `lib` folder
       - `rm -rf ~/oracle/lib/*`
    - Re-link the `libclntsh.dylib` file to the `libclntsh.dylib.19.1` file
-      - `ln -s ~/oracle/lib/libclntsh.dylib.19.1 ~/oracle/lib/libclntsh.dylib`
+      - `ln -s ~/oracle/libclntsh.dylib.19.1 ~/oracle/lib/libclntsh.dylib`
 9. Woila! You can now run CX Oracle on any of your projects. Remember that the steps performed by you above is one-time only! If your installation is corrupted, please re-run the `install.sh` file.
 
 ## Notes
