@@ -23,8 +23,13 @@ All you got to do, is to follow the steps below.
 4. Change the file permission of `install.sh` to executable. (Tip: `chmod +x install.sh`)
 5. Run the `install.sh` file. (Tip: `./install.sh`)
 6. Wait for the installation to complete.
-7. Upon completion, please ensure the environment variables are globalised for your terminal. (Tip: `source ~/.bashrc`)
-8. Woila! You can now run CX Oracle on any of your projects. Remember that the steps performed by you above is one-time only! If your installation is corrupted, please re-run the `install.sh` file.
+7. Upon completion, please ensure the environment variables are globalised for your terminal. The environment key-value pair will be shown on your Terminal. (Tip: `source ~/.bashrc`)
+8. Please re-link the `libclntsh.dylib` file to the `libclntsh.dylib.19.1` file.
+   - Delete the contents in the `lib` folder
+      - `rm -rf ~/oracle/lib/*`
+   - Re-link the `libclntsh.dylib` file to the `libclntsh.dylib.19.1` file
+      - `ln -s ~/oracle/lib/libclntsh.dylib.19.1 ~/oracle/lib/libclntsh.dylib`
+9. Woila! You can now run CX Oracle on any of your projects. Remember that the steps performed by you above is one-time only! If your installation is corrupted, please re-run the `install.sh` file.
 
 ## Notes
 
