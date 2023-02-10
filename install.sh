@@ -62,6 +62,7 @@ if [ "$PROMPT" = "mac" ]; then
     echo " "
     echo "export ORACLE_HOME=/Users/$(whoami)/oracle"
     echo "export LD_LIBRARY_PATH=$ORACLE_HOME"
+    echo "export DYLD_LIBRARY_PATH=$ORACLE_HOME"
     echo "export PATH=$ORACLE_HOME:$PATH"
 
     exit 1
