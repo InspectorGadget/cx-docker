@@ -49,6 +49,16 @@ All you got to do, is to follow the steps below.
 - You may be asked for your password during the installation process. This is because the script needs to run some commands as `root` user, but it is totally safe!
 - I will ensure the environment variables are globalised in the future! (WIP)
 
+## Troubleshooting
+
+- If you are facing any issues, please feel free to open an issue on this repository.
+- One common issue is as below;
+   ```
+      cx_Oracle.DatabaseError: DPI-1047: Cannot locate a 64-bit Oracle Client library: "dlopen(/Users/raeveen/oracle/lib/libclntsh.dylib, 0x0001): tried: '/Users/raeveen/oracle/lib/libclntsh.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/Users/raeveen/oracle/lib/libclntsh.dylib' (no such file), '/Users/raeveen/oracle/lib/libclntsh.dylib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64')), '/Users/raeveen/oracle/libclntsh.dylib.19.1' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/Users/raeveen/oracle/libclntsh.dylib.19.1' (no such file), '/Users/raeveen/oracle/libclntsh.dylib.19.1' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64'))". See https://cx-oracle.readthedocs.io/en/latest/user_guide/installation.html for help
+   ```
+
+   - In this case, ensure your commands are piped through Rosetta. For example, `arch -x86_64 flask run`.
+
 ## Contributing
 
 If you have any suggestions, please feel free to open an issue or a pull request.
