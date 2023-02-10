@@ -56,12 +56,13 @@ if [ "$PROMPT" = "mac" ]; then
 
     # Create symlink
     sudo mkdir -p /Users/$(whoami)/oracle/lib
-    sudo ln -s $HOME/oracle/libclntsh.dylib.19.1 /Users/$(whoami)/oracle/lib/libclntsh.dylib
+    sudo ln -s $HOME/oracle/libclntsh.dylib.19.8 /Users/$(whoami)/oracle/lib/libclntsh.dylib
 
     echo "Set environment variables in your shell."
     echo " "
     echo "export ORACLE_HOME=/Users/$(whoami)/oracle"
     echo "export LD_LIBRARY_PATH=$ORACLE_HOME"
+    echo "export DYLD_LIBRARY_PATH=$ORACLE_HOME"
     echo "export PATH=$ORACLE_HOME:$PATH"
 
     exit 1
